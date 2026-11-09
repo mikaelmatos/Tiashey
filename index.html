@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Você não clicou em nada e já sabemos muito sobre você</title>
+<meta name="description" content="Artigo de prevenção a golpes digitais: veja ao vivo o que um simples link revela sobre você.">
+<style>
+:root{--bg:#e9eef4;--ink:#0d1b2a;--mut:#4a5a6d;--card:#fff;--line:#c9d3df;--alert:#c8102e;--doss:#12263f;--dossfg:#dbe7f5;--val:#ffc857}
+@media (prefers-color-scheme:dark){:root{--bg:#0b121b;--ink:#e6edf5;--mut:#98a8bb;--card:#131d2a;--line:#26354a;--alert:#ff5a6e;--doss:#08111c}}
+*{box-sizing:border-box}
+html{scroll-padding-top:12px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 Georgia,"Times New Roman",serif}
+main{max-width:740px;margin:0 auto;padding:56px 20px 90px}
+h1{font:700 clamp(32px,7vw,52px)/1.08 Georgia,serif;letter-spacing:-.02em;margin:0 0 18px}
+h2{font:700 26px/1.25 Georgia,serif;margin:56px 0 12px}
+p{margin:0 0 16px}
+.lead{font-size:21px;color:var(--mut)}
+.dossie{background:var(--doss);color:var(--dossfg);border-radius:6px;margin:36px 0;border-left:6px solid var(--alert);font:14px/1.5 ui-monospace,Menlo,Consolas,monospace}
+.topo{display:flex;align-items:baseline;gap:14px;padding:18px 18px 8px}
+#contador{font:700 56px/1 ui-monospace,Menlo,Consolas,monospace;color:var(--val)}
+.topo span{opacity:.85}
+.tab{max-height:420px;overflow:auto;padding:0 18px}
+table{width:100%;border-collapse:collapse}
+td{padding:6px 10px 6px 0;vertical-align:top;border-top:1px solid #ffffff1f;word-break:break-word}
+td.g{opacity:.6;width:26%}
+td.k{width:30%}
+td.v{color:var(--val)}
+tr{animation:ent .35s both}
+@keyframes ent{from{opacity:0}to{opacity:1}}
+.btns{display:flex;flex-wrap:wrap;gap:10px;padding:16px 18px 18px}
+button{font:600 14px system-ui,sans-serif;padding:10px 14px;border-radius:4px;border:1px solid var(--val);background:transparent;color:var(--val);cursor:pointer}
+button:hover{background:var(--val);color:#12263f}
+button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.fonte{font:13px/1.5 system-ui,sans-serif;color:var(--mut)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:20px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px;font:15px/1.55 system-ui,sans-serif}
+.card b{display:block;font:700 17px/1.3 Georgia,serif;margin-bottom:6px}
+ul.lista{padding-left:22px}
+ul.lista li{margin-bottom:10px}
+.aviso{border-top:1px solid var(--line);margin-top:56px;padding-top:18px}
+@media (prefers-reduced-motion:reduce){tr{animation:none}}
+</style>
+</head>
+<body>
+<main>
+<article>
+<h1>Você não clicou em nada e já sabemos muito sobre você</h1>
+<p class="lead">Bastou abrir esta página. Sem formulário, sem senha, sem permissão. Abaixo está o que o seu navegador entregou a um site comum nos primeiros segundos de visita.</p>
+
+<section class="dossie" aria-live="polite" aria-label="Dados coletados automaticamente">
+  <div class="topo"><b id="contador">0</b><span>dados coletados sobre você, agora</span></div>
+  <div class="tab"><table id="dados"></table></div>
+  <div class="btns">
+    <button id="btnGps" type="button">Mostrar minha localização exata</button>
+    <button id="btnBaixar" type="button">Baixar meu relatório (.json)</button>
+  </div>
+</section>
+<p class="fonte">Esta página roda inteira no seu navegador. Nada é enviado ou gravado no servidor do autor. A consulta de IP é feita direto do seu navegador a um serviço público (ipwho.is). O relatório só existe no seu computador, se você baixar.</p>
+
+<h2>Isso é o mínimo, não o máximo</h2>
+<p>Esta página foi gentil: mostrou tudo na tela e pediu permissão para a localização exata. Um site malicioso não faz isso. Ele junta o IP, o provedor, a cidade, o modelo do aparelho e a “impressão digital” do navegador, guarda tudo e usa depois, no momento certo, contra você.</p>
+<p>A impressão digital é a parte mais discreta. Cada combinação de tela, fuso, idioma, placa de vídeo e fontes é quase única. Ela permite reconhecer você em outros sites mesmo sem cookies e mesmo se você trocar de IP.</p>
+
+<h2>Como o golpe usa isso</h2>
+<div class="grid">
+  <div class="card"><b>Fica convincente</b>“Cliente da sua operadora em Fortaleza, sua fatura venceu.” Quando o golpista acerta cidade e provedor, a mensagem parece vir de quem já conhece você.</div>
+  <div class="card"><b>Faz o alvo certo</b>Aparelho, sistema e idioma definem qual página falsa mostrar: um banco, uma transportadora, um app de entrega. Cada vítima vê a isca mais provável.</div>
+  <div class="card"><b>Acompanha você</b>Quem sabe que o mesmo navegador visitou vários sites monta um perfil de rotina, horários e interesses. Isso alimenta golpes sob medida.</div>
+</div>
+<p>O mais perigoso é a confiança. Quem acha que “golpe é coisa de gente distraída” clica mais rápido, porque o link veio com o seu nome, a sua cidade e um motivo que faz sentido.</p>
+
+<h2>Como se proteger</h2>
+<ul class="lista">
+  <li><b>Desconfie da pressa.</b> “Última chance”, “conta bloqueada”, “encomenda retida”. Urgência é a ferramenta número um de quem quer que você não pense.</li>
+  <li><b>Não abra o link da mensagem.</b> Entre pelo aplicativo oficial ou digite o endereço do site. Banco e transportadora de verdade não se ofendem com isso.</li>
+  <li><b>Leia o endereço inteiro.</b> O que vale é o domínio logo antes do primeiro “/”. <code>banco.com.seguranca-app.xyz</code> pertence a seguranca-app.xyz, não ao banco.</li>
+  <li><b>Negue pedidos de localização, câmera, microfone e notificações</b> de sites que você acabou de conhecer. Ninguém precisa da sua localização exata para mostrar uma promoção.</li>
+  <li><b>Ative a verificação em duas etapas</b> em e-mail, banco e redes sociais, de preferência por aplicativo, não por SMS.</li>
+  <li><b>Use bloqueador de rastreadores e mantenha o navegador atualizado.</b> Isso reduz a impressão digital, mas não a elimina.</li>
+  <li><b>Pergunte por outro canal.</b> Recebeu um pedido de dinheiro de um parente? Ligue para ele antes de pagar.</li>
+</ul>
+
+<h2>Se você já clicou</h2>
+<p>Feche a página sem preencher nada. Se digitou senha, troque-a agora, no site oficial, e ative a verificação em duas etapas. Se informou dados de cartão ou fez Pix, ligue para o banco pelo número do verso do cartão e peça o bloqueio e a contestação. Registre um boletim de ocorrência e guarde prints da conversa e do link.</p>
+
+<p class="aviso fonte">Conteúdo de conscientização. Os dados exibidos acima são os que seu próprio navegador informa ao abrir qualquer página. A localização pelo IP é aproximada; a exata só aparece se você permitir.</p>
+</article>
+</main>
+
+<script>
+(() => {
+  const rows = [], tb = document.getElementById('dados'), ct = document.getElementById('contador');
+  const n = navigator, s = screen, Z = Intl.DateTimeFormat().resolvedOptions();
+
+  function add(g, k, v) {
+    if (v === undefined || v === null || v === '') v = 'indisponível';
+    v = String(v);
+    rows.push({ grupo: g, campo: k, valor: v });
+    ct.textContent = rows.length;
+    const tr = tb.insertRow();
+    [[g, 'g'], [k, 'k'], [v, 'v']].forEach(([t, c]) => { const td = tr.insertCell(); td.textContent = t; td.className = c; });
+  }
+
+  function contexto() {
+    add('Navegador', 'User-Agent', n.userAgent);
+    add('Navegador', 'Sistema', (n.userAgentData && n.userAgentData.platform) || n.platform);
+    add('Navegador', 'Idiomas', (n.languages || [n.language]).join(', '));
+    add('Navegador', 'Cookies ativos', n.cookieEnabled ? 'sim' : 'não');
+    add('Navegador', 'Do Not Track', n.doNotTrack);
+    add('Dispositivo', 'Núcleos de CPU', n.hardwareConcurrency);
+    add('Dispositivo', 'Memória (GB, aprox.)', n.deviceMemory);
+    add('Dispositivo', 'Pontos de toque', n.maxTouchPoints);
+    add('Tela', 'Resolução', s.width + '×' + s.height);
+    add('Tela', 'Janela do navegador', innerWidth + '×' + innerHeight);
+    add('Tela', 'Densidade de pixels', devicePixelRatio);
+    add('Tela', 'Profundidade de cor', s.colorDepth + ' bits');
+    add('Tela', 'Tema escuro', matchMedia('(prefers-color-scheme: dark)').matches ? 'sim' : 'não');
+    add('Contexto', 'Fuso horário', Z.timeZone);
+    add('Contexto', 'Hora local', new Date().toLocaleString('pt-BR'));
+    add('Contexto', 'Veio de', document.referrer || 'acesso direto');
+    add('Contexto', 'Endereço acessado', location.href);
+    add('Contexto', 'Páginas no histórico da aba', history.length);
+    const c = n.connection;
+    if (c) {
+      add('Rede', 'Tipo de conexão', c.effectiveType);
+      add('Rede', 'Velocidade (Mb/s)', c.downlink);
+      add('Rede', 'Latência (ms)', c.rtt);
+    }
+  }
+
+  async function ip() {
+    try {
+      const d = await (await fetch('https://ipwho.is/')).json();
+      if (!d.success) throw 0;
+      const c = d.connection || {};
+      add('Rede', 'Endereço IP', d.ip);
+      add('Rede', 'Provedor (ISP)', c.isp);
+      add('Rede', 'Organização / ASN', (c.org || '') + ' / AS' + (c.asn || ''));
+      add('Localização por IP', 'Cidade / Estado', d.city + ' / ' + d.region);
+      add('Localização por IP', 'País', d.country);
+      add('Localização por IP', 'Coordenadas aproximadas', d.latitude + ', ' + d.longitude);
+      add('Localização por IP', 'Fuso da rede', d.timezone && d.timezone.id);
+    } catch (e) {
+      add('Rede', 'Endereço IP', 'bloqueado por extensão ou rede');
+    }
+  }
+
+  async function hardware() {
+    try {
+      const gl = document.createElement('canvas').getContext('webgl');
+      const x = gl.getExtension('WEBGL_debug_renderer_info');
+      add('Dispositivo', 'Placa de vídeo (GPU)', x ? gl.getParameter(x.UNMASKED_RENDERER_WEBGL) : null);
+    } catch (e) {}
+    try {
+      const b = await n.getBattery();
+      add('Dispositivo', 'Bateria', Math.round(b.level * 100) + '% ' + (b.charging ? '(carregando)' : '(na bateria)'));
+    } catch (e) {}
+    try {
+      const d = await n.mediaDevices.enumerateDevices();
+      const q = k => d.filter(x => x.kind === k).length;
+      add('Dispositivo', 'Câmeras / microfones', q('videoinput') + ' / ' + q('audioinput'));
+    } catch (e) {}
+    try {
+      const p = await n.permissions.query({ name: 'geolocation' });
+      add('Permissões', 'Localização exata', p.state);
+    } catch (e) {}
+  }
+
+  async function impressao() {
+    try {
+      const c = document.createElement('canvas'); c.width = 260; c.height = 50;
+      const x = c.getContext('2d');
+      x.textBaseline = 'top'; x.font = '16px Arial';
+      x.fillStyle = '#f60'; x.fillRect(8, 4, 90, 30);
+      x.fillStyle = '#069'; x.fillText('Não clique 🔒 123', 4, 18);
+      const base = [c.toDataURL(), n.userAgent, s.width, s.height, Z.timeZone, n.hardwareConcurrency, (n.languages || []).join()].join('|');
+      const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(base));
+      add('Identificação', 'Impressão digital do navegador', [...new Uint8Array(h)].slice(0, 8).map(b => b.toString(16).padStart(2, '0')).join(''));
+    } catch (e) {
+      add('Identificação', 'Impressão digital do navegador', 'requer HTTPS');
+    }
+  }
+
+  document.getElementById('btnGps').onclick = () => {
+    if (!n.geolocation) return add('Localização GPS', 'Status', 'não suportado');
+    n.geolocation.getCurrentPosition(p => {
+      add('Localização GPS', 'Coordenadas exatas', p.coords.latitude.toFixed(6) + ', ' + p.coords.longitude.toFixed(6));
+      add('Localização GPS', 'Precisão (metros)', Math.round(p.coords.accuracy));
+    }, () => add('Localização GPS', 'Status', 'negada. Foi a decisão certa.'), { enableHighAccuracy: true, timeout: 15000 });
+  };
+
+  document.getElementById('btnBaixar').onclick = () => {
+    const out = { gerado_em: new Date().toISOString(), pagina: location.href, dados: {} };
+    rows.forEach(r => { (out.dados[r.grupo] = out.dados[r.grupo] || {})[r.campo] = r.valor; });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' }));
+    a.download = 'relatorio-exposicao.json';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  };
+
+  (async () => { contexto(); await ip(); await hardware(); await impressao(); })();
+})();
+</script>
+</body>
+</html>
